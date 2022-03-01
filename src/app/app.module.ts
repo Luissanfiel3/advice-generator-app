@@ -4,6 +4,8 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppComponent } from './app.component';
 import { AdviceCardComponent } from './advice-card/advice-card.component';
 import {FlexLayoutModule} from "@angular/flex-layout";
+import {AdviceService} from "./services/advice.service";
+import {HttpClientModule} from "@angular/common/http";
 
 @NgModule({
   declarations: [
@@ -12,9 +14,10 @@ import {FlexLayoutModule} from "@angular/flex-layout";
   ],
   imports: [
     BrowserModule,
-    FlexLayoutModule
+    FlexLayoutModule,
+    HttpClientModule
   ],
-  providers: [],
+  providers: [AdviceService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
