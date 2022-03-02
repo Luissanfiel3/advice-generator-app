@@ -2,8 +2,40 @@
 @import url('https://fonts.googleapis.com/css2?family=Manrope:wght@800&family=Rubik:wght@600&display=swap');
 
 @import url('https://fonts.googleapis.com/css2?family=Rubik:wght@500&display=swap');
+
+.rotate{
+  /* Duración de la trasformación */
+  -webkit-transition-duration: 2s;
+  -moz-transition-duration: 2s;
+  -o-transition-duration: 2s;
+  transition-duration: 2s;
+
+  /* cursor tipo enlace */
+  cursor: pointer;
+  cursor: hand;
+}
+
+.rotate:after {
+
+}
+
+.rotate:active
+{
+  -webkit-transform:rotate(360deg);
+  -moz-transform:rotate(360deg);
+  -o-transform:rotate(360deg);
+  transition-duration: 4s;
+}
+
+.rotate:active:after {
+  -webkit-transform:rotate(360deg);
+  -moz-transform:rotate(360deg);
+  -o-transform:rotate(360deg);
+}
+
+
 .card {
-  box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+  box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
   background-color: #313A49;
   border-radius: 10px;
   align-content: center;
@@ -15,7 +47,7 @@
 .card-title {
   align-self: center;
   padding: 4px;
-  color:#6ED4B1;
+  color: #6ED4B1;
   width: 90%;
 }
 
@@ -39,7 +71,6 @@
 }
 
 .card-image {
-  display: flex;
   align-items: center;
   align-self: center;
   flex: 1 1 auto;
@@ -47,28 +78,37 @@
 }
 
 .card-image > img {
- width: 100%;
+  width: 100%;
   align-self: center;
 }
+
+card-image > img:hover {
+  -webkit-animation: 4s rotate linear infinite;
+  animation: 4s rotate linear infinite;
+  -webkit-transform-origin: 50% 50%;
+  transform-origin: 50% 50%;
+}
+
+
 
 .btn {
   align-self: center;
   display: flex;
   align-content: center;
- justify-content: center;
+  justify-content: center;
   width: 90%;
 }
 
 button {
   border: none;
-  border-radius:50%;
+  border-radius: 50%;
   background-color: #52FFA8;
   padding: 8px;
   margin-top: 30px;
 }
 
 button img {
-  margin:0;
+  margin: 0;
   width: 70%;
 }
 

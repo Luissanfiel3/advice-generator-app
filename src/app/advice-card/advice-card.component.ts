@@ -18,7 +18,7 @@ export class AdviceCardComponent  {
     this.adviceService.getData().subscribe(data => {
 
       this.advice = data['slip'];
-      console.log(this.advice?.advice)
+      console.log(this.advice?.id)
     })
    //console.log(this.advice);
   }
